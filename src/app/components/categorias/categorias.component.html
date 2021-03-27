@@ -1,0 +1,33 @@
+
+<div class="tabla mt-5">
+  <h1>Listado de Categorias</h1>
+  <button class="btn btn-primary mt-5" [routerLink]="['/editar-agregar-categoria']">Agregar Nueva Categoria</button>
+<table class="table table-striped mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Fecha Creacion</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Ver Productos</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let categoria of categorias">
+      <td>{{categoria.id}}</td>
+      <td>{{categoria.nombre}}</td>
+      <td>{{categoria.descripcion}}</td>
+      <td>{{categoria.fecha_creacion}}</td>
+      <td>{{categoria.estado}}</td>
+      <td><button class="btn btn-primary" [routerLink]="['/categorias', categoria.id, 'productos']">Ver productos</button></td>
+      <td><button class="btn btn-info" [routerLink]="['/editar-agregar-categoria', categoria.id]">Editar</button></td>
+      <td><button class="btn btn-danger" (click)="eliminar(categoria.id)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
