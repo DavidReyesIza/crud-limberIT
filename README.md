@@ -1,3 +1,5 @@
+#Se utilizo json-server para simular el backend por lo que es necesario levantarlo.
+
 # Crud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
